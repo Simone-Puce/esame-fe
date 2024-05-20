@@ -14,6 +14,9 @@ function App() {
   const [filterForm] = Form.useForm()
   const [segnalazioni, setSegnalazioni] = useState<Segnalazione[]>([])
   const generalRules: Rule[] = [{ required: true, message:"This field is required fill it!" }]
+  const emailRules: Rule[] = [
+    { required: true, message: "Please input a valid email!", type: "email" }
+]
 
   const showModal = () => {
     setCreaSegnalazioneModal(true);
@@ -69,42 +72,43 @@ function App() {
             label="Inserisci descrizione"
             rules={generalRules}
           >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item
             name="nomeCliente"
             label="Inserisci nome cliente"
             rules={generalRules}
           >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item
             name="cognomeCliente"
             label="Inserisci cognome cliente"
             rules={generalRules}
           >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item
             name="emailCliente"
             label="Inserisci email cliente"
-            rules={generalRules}
+            rules={emailRules}
+            
           >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item
             name="nomeTecnico"
             label="Inserisci nome tecnico"
             rules={generalRules}
             >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item
             name="cognomeTecnico"
             label="Inserisci cognome tecnico"
             rules={generalRules}
           >
-            <Input />
+            <Input allowClear/>
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" className="create-segnalazione-button">
