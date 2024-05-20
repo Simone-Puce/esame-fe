@@ -24,7 +24,6 @@ function App() {
   }
 
   const handleFilter = async () => {
-    //console.log(filterForm.getFieldsValue())
     const cognome = filterForm.getFieldValue("cognomeCliente")
     const creazioneString = filterForm.getFieldValue("dataCreazione")
     const formattedDate: string | null = creazioneString ? format(new Date(creazioneString), 'yyyy-MM-dd') : null;
@@ -53,6 +52,7 @@ function App() {
     if (createResponse) {
       confirmInsert()
     }
+    handleFilter()
   }
 
   const creationModal = (): ReactElement => {
