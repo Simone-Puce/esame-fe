@@ -169,6 +169,7 @@ function App() {
                 <Card title="Segnalazione" className="card-style" key={segnalazione.id}>
                   <p>Descrizione: {segnalazione.descrizione}</p>
                   <p>Email cliente: {segnalazione.cliente.email}</p>
+                  <p>Cognome cliente: {segnalazione.cliente.cognome}</p>
                   <p>Data della segnalazione: {segnalazione.creation !== undefined ? segnalazione.creation.toString() : ""}</p>
                   <Button onClick={() => deleteSegnalazioneHandler(segnalazione.id!)}>Cancella segnalazione</Button>
                 </Card>
