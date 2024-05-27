@@ -71,3 +71,16 @@
   margin: 1.5em;
   border: 2px solid black ;
 }
+
+.delete-button {
+  background-color: #ff4242;
+  color: white;
+}
+
+.create-form-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
