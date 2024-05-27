@@ -1,5 +1,9 @@
 export interface Tecnico {
-    id?: number,
-    nome: string,
+    idTecnico?: number
+    nome: string
     cognome: string
+    email: string
+    telefono: string
+    specializzazione: string
+    dataAssunzione: string
 }

@@ -18,7 +18,11 @@
   padding: 3% 0 0 0;
   margin: 0 auto 0 auto;
   padding-bottom: 5%;
+}
 
+.modal-div-body {
+  display: flex;
+  justify-content: space-around;
 }
 
 .sider-style {
@@ -29,7 +33,7 @@
 }
 
 .filter-form-style {
-  max-width: 80%;
+  max-width: 100%
 }
 
 .filter-style {
@@ -40,6 +44,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  padding:0 0.5em 0 0.5em;
 }
 
 .filter-button-style {
